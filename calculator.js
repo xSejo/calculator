@@ -18,7 +18,14 @@ let num1;
 let num2;
 let operator;
 
-function operate(operator, num1, num2) {}
+function operate(operator, num1, num2) {
+  if (operator === "+") return add(num1, num2);
+  else if (operator === "-") return subtract(num1, num2);
+  else if (operator === "*") return multiply(num1, num2);
+  else if (operator === "/") return divide(num1, num2);
+
+  return operator(num1, num2);
+}
 
 module.exports = {
   add,
