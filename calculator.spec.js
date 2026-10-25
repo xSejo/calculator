@@ -5,19 +5,19 @@ describe("add", () => {
     expect(calculator.add(0, 0)).toBe(0);
   });
 
-  test.skip("add positives", () => {
+  test("add positives", () => {
     expect(calculator.add(7, 1)).toBe(8);
   });
 
-  test.skip("add negatives", () => {
+  test("add negatives", () => {
     expect(calculator.add(-2, -5)).toBe(-7);
   });
 
-  test.skip("add positive with negative", () => {
-    expect(calculator.add(-3, 2)).toBe(1);
+  test("add positive with negative", () => {
+    expect(calculator.add(-3, 2)).toBe(-1);
   });
 
-  test.skip("add floats", () => {
+  test("add floats", () => {
     expect(calculator.add(2.5, 2.5)).toBe(5);
   });
 });
@@ -27,46 +27,46 @@ describe("subtract", () => {
     expect(calculator.subtract(0, 0)).toBe(0);
   });
 
-  test.skip("subtract positives", () => {
+  test("subtract positives", () => {
     expect(calculator.subtract(7, 5)).toBe(2);
   });
 
-  test.skip("subtract negatives", () => {
+  test("subtract negatives", () => {
     expect(calculator.subtract(-7, -5)).toBe(-2);
   });
 
-  test.skip("subtract positive with negative", () => {
+  test("subtract positive with negative", () => {
     expect(calculator.subtract(-3, 2)).toBe(-5);
   });
 
-  test.skip("subtract floats", () => {
-    expect(calculator.subtract(2.5, 2.5)).toBe(5);
+  test("subtract floats", () => {
+    expect(calculator.subtract(2.5, 2.5)).toBe(0);
   });
 });
 
 describe("multiply", () => {
-  test.skip("multiply 7 by 0", () => {
+  test("multiply 7 by 0", () => {
     expect(calculator.multiply(7, 0)).toBe(0);
   });
-  test.skip("multiply positive by negative", () => {
+  test("multiply positive by negative", () => {
     expect(calculator.multiply(7, -2)).toBe(-14);
   });
-  test.skip("multiply negatives", () => {
+  test("multiply negatives", () => {
     expect(calculator.multiply(-5, -2)).toBe(10);
   });
-  test.skip("multiply floats", () => {
+  test("multiply floats", () => {
     expect(calculator.multiply(2.5, 2.5)).toBe(6.25);
   });
 });
 
 describe("divide", () => {
   test("divide 7 by 0", () => {
-    expect(calculator.divide(7, 0)).toBe(0);
+    expect(calculator.divide(7, 0)).toBe(Infinity);
   });
-  test.skip("divide positive by nagative", () => {
+  test("divide positive by nagative", () => {
     expect(calculator.divide(7, -2)).toBe(-3.5);
   });
-  test.skip("divide negatives", () => {
+  test("divide negatives", () => {
     expect(calculator.divide(-2, -2)).toBe(1);
   });
 });
