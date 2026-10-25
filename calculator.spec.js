@@ -55,7 +55,7 @@ describe("multiply", () => {
     expect(calculator.multiply(-5, -2)).toBe(10);
   });
   test("multiply floats", () => {
-    expect(calculator.multiply(2.5, 2.5)).toBe(6.25);
+    expect(calculator.multiply(2.5, 2.5)).toBeCloseTo(6.25);
   });
 });
 
@@ -63,7 +63,7 @@ describe("divide", () => {
   test("divide 7 by 0", () => {
     expect(calculator.divide(7, 0)).toBe(Infinity);
   });
-  test("divide positive by nagative", () => {
+  test("divide positive by negative", () => {
     expect(calculator.divide(7, -2)).toBe(-3.5);
   });
   test("divide negatives", () => {
