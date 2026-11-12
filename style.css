@@ -1,8 +1,50 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   border: 1px solid black;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   display: flex;
   justify-content: center;
+  background-color: lightblue;
+}
+
+main {
+  flex: 1;
+
+  display: flex;
+  background-color: pink;
+}
+
+main > section {
+  flex: 1;
+
+  display: flex;
+}
+
+#calculator {
+  height: 90%;
+  background-color: lightgreen;
+
+  align-self: center;
+}
+
+#historyLog {
+  height: 90%;
+  background-color: lightyellow;
+
+  align-self: center;
+}
+
+footer {
+  background-color: lightgray;
+  height: 10vh;
 }
