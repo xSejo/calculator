@@ -2,49 +2,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid black;
 }
 
 body {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  background-color: lightblue;
+  padding: 1rem;
+  background-color: pink;
+  border-bottom: solid black 1px;
 }
 
 main {
   flex: 1;
+  padding: 1rem;
 
   display: flex;
-  background-color: pink;
-}
-
-main > section {
-  flex: 1;
-
-  display: flex;
-}
-
-#calculator {
-  height: 90%;
-  background-color: lightgreen;
-
-  align-self: center;
-}
-
-#historyLog {
-  height: 90%;
-  background-color: lightyellow;
-
-  align-self: center;
+  gap: 4rem;
+  justify-content: center;
 }
 
 footer {
-  background-color: lightgray;
-  height: 10vh;
+  padding: 2rem;
+  background-color: pink;
+  border-top: solid black 1px;
+}
+
+.calculator {
+  border: solid red 1px;
+  width: 30rem;
+}
+
+.calculator > .buttonContainer {
+  border: solid green 2px;
+  height: 30rem;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator > .buttonContainer > .buttonGrid {
+  flex: 0 0 25%;
+  border: solid purple 1px;
+  height: 25%;
+}
+
+/* calculator > .buttonGrid > button {
+  border: solid black 1px;
+  padding: 1rem;
+  font-size: 1.5rem;
+} */
+
+.calculator > #display {
+  border: solid yellow 1px;
+  height: 5rem;
+  margin: 2rem;
+}
+
+.historyLog {
+  border: solid blue 1px;
+  width: 50rem;
 }
