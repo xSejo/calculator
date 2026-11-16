@@ -27,9 +27,16 @@ function operate(operator, num1, num2) {
   return operator(num1, num2);
 }
 
-module.exports = {
-  add,
-  subtract,
-  multiply,
-  divide,
-};
+const buttons = Array.from(document.querySelectorAll("button"));
+buttons.forEach((button) =>
+  button.addEventListener("click", () => {
+    console.log(button.dataset.value);
+  }),
+);
+
+// module.exports = {
+//   add,
+//   subtract,
+//   multiply,
+//   divide,
+// };
