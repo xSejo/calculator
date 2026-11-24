@@ -52,7 +52,7 @@ footer {
   height: 20%;
 }
 
-.calculator > #display {
+.calculator > .displayScreen {
   border: solid yellow 2px;
   height: 5rem;
   margin: 2rem;
