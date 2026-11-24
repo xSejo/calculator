@@ -27,12 +27,12 @@ function operate(operator, num1, num2) {
   return operator(num1, num2);
 }
 
-const buttons = Array.from(document.querySelectorAll("button"));
-buttons.forEach((button) =>
-  button.addEventListener("click", () => {
-    console.log(button.dataset.value);
-  }),
-);
+const buttons = document.getElementById("buttonContainer");
+buttons.addEventListener("click", (e) => {
+  let button = e.target.closest("button");
+  let value = button.dataset.value;
+  console.log(value);
+});
 
 // module.exports = {
 //   add,

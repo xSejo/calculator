@@ -38,7 +38,7 @@ footer {
   width: 30rem;
 }
 
-.calculator > .buttonContainer {
+.calculator > #buttonContainer {
   border: solid green 3px;
   height: 30rem;
 
@@ -46,7 +46,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.calculator > .buttonContainer > div {
+.calculator > #buttonContainer > div {
   flex: 0 0 25%;
   border: solid purple 1px;
   height: 20%;
