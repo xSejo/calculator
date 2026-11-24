@@ -14,9 +14,21 @@ function divide(num1, num2) {
   return num1 / num2;
 }
 
+const displayText = document.getElementById("displayText");
+
+let actions = {  
+                '1': setNumbers, '1': setNumbers, '2': setNumbers,'3': setNumbers, '4': setNumbers,
+                '5': setNumbers, '6': setNumbers, '7': setNumbers, '8': setNumbers, '9': setNumbers,
+                '+': setOperator, '-': setOperator, '*': setOperator, '/': setOperator, '%': setOperator,
+                'R': getSquareRoot,
+                "C": clearDisplay,
+                "=": operate
+              };
+
 let num1;
 let num2;
 let operator;
+let isOperatorSet = false;
 
 function operate(operator, num1, num2) {
   if (operator === "+") return add(num1, num2);
@@ -27,12 +39,13 @@ function operate(operator, num1, num2) {
   return operator(num1, num2);
 }
 
-function setNumbers() {}
-function setOperator() {
-  let isOperatorSet = false;
+function setNumbers() {};
+function setOperator() {};
+
+function getSquareRoot(number){
+  displayText.textContent = Math.getSquareRoot(number);
 }
 
-const displayText = document.getElementById("displayText");
 function updateDisplay(value) {
   displayText.textContent = value;
 }
